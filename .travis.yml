@@ -3,13 +3,12 @@ jobs:
   include:
     - os: linux
       language: python
-      python:
-        - "3.8"
-      arch: amd64
-      dist: focal
-      before_script:
-        - export COMMIT_HASH=$(git rev-parse --short HEAD)
-        - echo "Commit hash: $COMMIT_HASH"
-      script:
-        - echo "Commit hash: $COMMIT_HASH"
-        - python hello_world.py
+python:
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+before_script:
+  - export COMMIT_HASH=$(git rev-parse --short HEAD)
+  - echo "Commit hash: $COMMIT_HASH"
+script:
+  - python hello_world.py
