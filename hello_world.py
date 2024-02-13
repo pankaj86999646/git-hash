@@ -1,1 +1,3 @@
-print (hello_world!!!)
+# This program prints Hello, world!
+
+print('Hello, world!')
