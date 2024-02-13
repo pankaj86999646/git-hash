@@ -9,6 +9,7 @@ jobs:
       dist: focal
       before_script:
         - export COMMIT_HASH=$(git rev-parse --short HEAD)
+        - echo "Commit hash: $COMMIT_HASH"
       script:
         - echo "Commit hash: $COMMIT_HASH"
         - python hello_world.py
